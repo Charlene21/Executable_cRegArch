@@ -13,8 +13,10 @@
 
 #include <cstdlib>
 #include "cRegArchModel.h"
+#include "cAR.h"
 
 using namespace std;
+
 
 /*
  * 
@@ -22,6 +24,9 @@ using namespace std;
 int main(int argc, char** argv) {
 
     cRegArchModel *myModel = new cRegArchModel();
+    cGSLVector const *myVect = new cGSLVector(5,6); 
+    cAR * myAR = new cAR(*myVect);
+    myAR->mParams->Print();
     return 0;
 }
 
